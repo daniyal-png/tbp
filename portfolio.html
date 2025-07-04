@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | The Boys Prod</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/script.js"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Load Header -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <!-- Hero -->
+      <section class="page-hero">
+        <div class="container">
+          <h1>Our Portfolio</h1>
+          <p>Visual stories we’ve brought to life — bold, cinematic, unforgettable.</p>
+        </div>
+      </section>
+
+      <!-- Filter Section -->
+      <section class="filter-section">
+        <div class="container">
+            <div class="filter-bar">
+            <div class="filter-group">
+                <label for="format-select">Format</label>
+                <select id="format-select">
+                <option value="all">All</option>
+                <option value="image">Image</option>
+                <option value="video">Video</option>
+                <option value="reel">Reel</option>
+
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="niche-select">Niche</label>
+                <select id="niche-select">
+                <option value="all">All</option>
+                <option value="fashion">fashion</option>
+                <option value="brand">Brand</option>
+                <option value="music">Music</option>
+                </select>
+            </div>
+
+            <button id="apply-filter" class="filter-action-btn">Apply</button>
+            <button id="clear-filter" class="filter-action-btn">Clear</button>
+            </div>
+        </div>
+        </section>
+
+
+      <!-- Portfolio Grid -->
+      <section class="portfolio-section">
+        <div class="container portfolio-grid">
+          <!-- Example Items -->
+          <div class="portfolio-item" data-format="image" data-niche="fashion" data-shoot="shoot1">
+            <img src="assets/images/event1-thumb.jpg" alt="Event 1">
+          </div>
+
+          <div class="portfolio-item" data-format="video" data-niche="brand" data-shoot="shoot2">
+            <img src="assets/images/brand1-thumb.jpg" alt="Brand Video">
+          </div>
+
+          <div class="portfolio-item" data-format="image" data-niche="brand" data-shoot="shoot3">
+            <img src="assets/images/brand2-thumb.jpg" alt="Brand Image">
+          </div>
+
+          <div class="portfolio-item" data-format="reel" data-niche="music" data-shoot="shoot4">
+            <img src="assets/images/music1-thumb.jpg" alt="Music Reel">
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Load Footer -->
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox hidden">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <span class="close">&times;</span>
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-description"></p>
+        <div id="lightbox-media-wrapper">
+            <button id="prev-slide" class="arrow left">&#10094;</button>
+            <button id="next-slide" class="arrow right">&#10095;</button>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
