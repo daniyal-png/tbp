@@ -335,3 +335,256 @@ main {
 .contact-content .btn-primary:hover {
   background-color: #b00000;
 }
+
+/* Page Hero */
+.page-hero {
+  padding: 4rem 0 2rem;
+  background-color: #0f0f0f;
+  text-align: center;
+  color: #fff;
+}
+
+.page-hero h1 {
+  font-size: 2.5rem;
+  color: #d80000;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Filter Section */
+.filter-section {
+  background-color: #0f0f0f;
+  padding: 2rem 0;
+  color: #fff;
+  text-align: center;
+  border-bottom: 1px solid #222;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  color: #d80000;
+  font-weight: 600;
+}
+
+select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  color: #fff;
+  min-width: 120px;
+}
+
+.filter-action-btn {
+  padding: 0.5rem 1rem;
+  background-color: #d80000;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.filter-action-btn:hover {
+  background-color: #b00000;
+}
+
+
+
+/* Portfolio Grid */
+.portfolio-section {
+  padding: 3rem 0;
+  background-color: #111;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.portfolio-item {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(216, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox Modal */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  pointer-events: none;
+}
+
+.lightbox.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.lightbox-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #000;
+  opacity: 0.6;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.lightbox-content h3 {
+  margin-bottom: 0.5rem;
+  color: #ff3c3c;
+}
+
+.lightbox-content p {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+/* Slide animation */
+#lightbox-media-wrapper > * {
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+#lightbox-media-wrapper {
+  position: relative;
+  height: 500px;
+}
+
+#lightbox-media-wrapper .active-slide {
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+}
+
+
+.lightbox-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.lightbox-nav button {
+  background: #ff3c3c;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Lightbox fade-in */
+.lightbox {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+
+.lightbox.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+/* Arrows inside media */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(216, 0, 0, 0.8);
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
